@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: comexdb
+      MYSQL_ROOT_PASSWORD: Cit123456
+    volumes:
+      - ./db-volume:/var/lib/mysql/
+
+  api:
+    image: comex/comex-api
+    environment:
+      DB_HOST: database
+    ports:
+      - "8080:8080"
+volumes:
+  db-volume:
