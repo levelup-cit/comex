@@ -1,13 +1,18 @@
-# Comex
+### Comex
 
-## Informações gerais dos pedidos em _pedidos.csv_
-- Campos: **CATEGORIA, PRODUTO, PREÇO, QUANTIDADE, DATA, CLIENTE**
+#### Diagrama de integração entre os serviços
+
+Planeje e faça um diagrama da integração entre os serviços:
+
+* loja (o comex que você vem trabalhando)
+* pagamentos
+* notas fiscais
+Quando um pedido for feito na loja, deve ser criado um pagamento e gerada a nota fiscal.
+
+Pense em integrações síncronas e assíncronas.
+
+Para as integrações síncronas, pense em chamadas HTTP entre os serviços.
+Para as integrações assícronas, pense em tópicos, partições, chaves e consumer groups, usando JSON como formato de mensagens no Kafka.
 
 
-### RELATÓRIO DE VALORES TOTAIS
-- TOTAL DE PEDIDOS REALIZADOS: 16
-- TOTAL DE PRODUTOS VENDIDOS: 35
-- TOTAL DE CATEGORIAS: 5
-- MONTANTE DE VENDAS: R$ 178.374,49
-- PEDIDO MAIS BARATO: R$ 95,17 (Clean Code)
-- PEDIDO MAIS CARO: R$ 55.056,00 (iPhone 13 Pro)
+![Diagrams_sinc_assinc drawio (3)](https://user-images.githubusercontent.com/105435774/180076099-1aebeeb1-6711-4fe6-a806-e530c9a82d26.png)
